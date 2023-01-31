@@ -62,3 +62,10 @@ vm_name = [
   "prj1-vm2",
 ]
 
+### Miscellaneous files worth mentioning
+1.  **policy_assignment_output.txt** - this is the result after running the command:  az policy assignment list
+2.  **policy_assignment_screencap.jpg** - is equivalent of the above, but in a picture format
+3.  **policy_violation_screenshot.jpg** - is a screen shot of a policy violation when the tag is not supplied during the deployment
+4.  **terraform_apply_output.txt** - this is the result if the terraform command apply that shows no error
+
+
