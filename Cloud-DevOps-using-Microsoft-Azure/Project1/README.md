@@ -1,14 +1,11 @@
 # Azure Infrastructure Operations Project: Deploying a scalable IaaS web server in Azure
 
 ### Introduction
-For this project, you will write a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
+For this project, I created a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
 
 ### Getting Started
 1. Clone this repository
-
 2. Create your infrastructure as code
-
-3. Update this README to reflect how someone would use your code.
 
 ### Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
@@ -17,7 +14,12 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-**Your words here**
+1. Running the Packer template:
+    a. Open the server.json file, in line 3, 4, and 5, you need to supply the client id, secret and subscription id from your Azure account respectively. 
+    b. The Packer is dependent to an existing resource group, by default the resource group name is "PackerImages" in line 6, you need to pre-create this, using the command below: az group create --name PackerImages --location southcentralus
+    c. The location is set by default to "South Central US", change this if necessary.
+    
+3. Running the Terraform template:
 
 ### Output
 Below is the expected output of the terraform apply command, these are defined from output.tf, the azurerm_lb_frontend_ip_configuration and vm_name output variables.
