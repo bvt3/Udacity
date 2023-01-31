@@ -1,0 +1,64 @@
+PS C:\Temp\Project 1 - sources\TEST-policy> az policy assignment list
+[
+  {
+    "description": null,
+    "displayName": "TaggingPolicy - Require a tag and its value on resources",
+    "enforcementMode": "Default",
+    "id": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/providers/Microsoft.Authorization/policyAssignments/5347808e4f5a4d64be1b4e4e",
+    "identity": null,
+    "location": null,
+    "metadata": {
+      "assignedBy": "Benito Tio",
+      "createdBy": "d5200371-a343-4afb-b393-d348ab11f668",
+      "createdOn": "2023-01-31T13:41:38.0672095Z",
+      "parameterScopes": {},
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "name": "5347808e4f5a4d64be1b4e4e",
+    "nonComplianceMessages": [
+      {
+        "message": "Tag is required",
+        "policyDefinitionReferenceId": null
+      }
+    ],
+    "notScopes": [],
+    "parameters": {
+      "tagName": {
+        "value": "project"
+      },
+      "tagValue": {
+        "value": "Udacity project 1"
+      }
+    },
+    "policyDefinitionId": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/providers/Microsoft.Authorization/policyDefinitions/tagging-policy",
+    "scope": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d",
+    "systemData": {
+      "createdAt": "2023-01-31T13:41:37.930484+00:00",
+      "createdBy": "bvt3@ymail.com",
+      "createdByType": "User",
+      "lastModifiedAt": "2023-01-31T13:41:37.930484+00:00",
+      "lastModifiedBy": "bvt3@ymail.com",
+      "lastModifiedByType": "User"
+    },
+    "type": "Microsoft.Authorization/policyAssignments"
+  },
+  {
+    "description": "This is the default set of policies monitored by Azure Security Center. It was automatically assigned as part of onboarding to Security Center. The default assignment contains only audit policies. For more information please visit https://aka.ms/ascpolicies",
+    "displayName": "ASC Default (subscription: a9eb2381-970b-445a-b19e-5a5207d65a4d)",
+    "enforcementMode": "Default",
+    "id": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/providers/Microsoft.Authorization/policyAssignments/SecurityCenterBuiltIn",
+    "identity": null,
+    "location": null,
+    "systemData": {
+      "createdAt": "2023-01-30T03:12:54.806967+00:00",
+      "createdBy": "8edd93e1-2103-40b4-bd70-6e34e586362d",
+      "createdByType": "Application",
+      "lastModifiedAt": "2023-01-30T03:12:54.806967+00:00",
+      "lastModifiedBy": "8edd93e1-2103-40b4-bd70-6e34e586362d",
+      "lastModifiedByType": "Application"
+    },
+    "type": "Microsoft.Authorization/policyAssignments"
+  }
+]
+PS C:\Temp\Project 1 - sources\TEST-policy>
