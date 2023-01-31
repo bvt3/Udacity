@@ -9,7 +9,7 @@ PS C:\Temp\Project 1 - sources\TEST-policy> az policy assignment list
     "location": null,
     "metadata": {
       "assignedBy": "Benito Tio",
-      "createdBy": "d5200371-a343-4afb-b393-d348ab11f668",
+      "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "createdOn": "2023-01-31T13:41:38.0672095Z",
       "parameterScopes": {},
       "updatedBy": null,
