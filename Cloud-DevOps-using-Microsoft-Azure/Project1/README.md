@@ -14,7 +14,7 @@ For this project, I created a Packer template and a Terraform template to deploy
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-1. Running the Packer template:
+####1. Running the Packer template:
     a. Open the server.json file, in line 3, 4, and 5, you need to supply the client id, secret and subscription id from your Azure account respectively. 
     b. The Packer is dependent to an existing resource group, by default the resource group name is "PackerImages" in line 6, you need to pre-create this, using the command below: az group create --name PackerImages --location southcentralus
     c. The location is set by default to "South Central US", change this if necessary.
