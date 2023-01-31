@@ -28,7 +28,7 @@ For this project, I created a Packer template and a Terraform template to deploy
 
     a. There are three files related to terraform, these are the main.tf, variables.tf and output.tf. You can run directly the terraform plan using the command:  terraform apply "solution.plan" 
     
-    b.
+    b. You can edit some of the default parameters by opening the file variables.tf. Here you can find and set variables like vm_count, location, etc. Only the two variables namely packer_resource_group_name and packer_image_name should not be change because it is dependent on the Packer template from before.
 
 ### Output
 Below is the expected output of the terraform apply command, these are defined from output.tf, the azurerm_lb_frontend_ip_configuration and vm_name output variables.
