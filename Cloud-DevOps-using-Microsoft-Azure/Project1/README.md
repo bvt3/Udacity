@@ -20,7 +20,7 @@ For this project, you will write a Packer template and a Terraform template to d
 **Your words here**
 
 ### Output
-Below is the expected output of the terraform apply command:
+Below is the expected output of the terraform apply command, these are defined from output.tf, the azurerm_lb_frontend_ip_configuration and vm_name output variables.
 
 Outputs:
 
