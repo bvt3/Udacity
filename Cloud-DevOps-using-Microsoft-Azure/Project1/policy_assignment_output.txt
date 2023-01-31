@@ -4,7 +4,7 @@ PS C:\Temp\Project 1 - sources\TEST-policy> az policy assignment list
     "description": null,
     "displayName": "TaggingPolicy - Require a tag and its value on resources",
     "enforcementMode": "Default",
-    "id": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/providers/Microsoft.Authorization/policyAssignments/5347808e4f5a4d64be1b4e4e",
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Authorization/policyAssignments/5347808e4f5a4d64be1b4e4e",
     "identity": null,
     "location": null,
     "metadata": {
@@ -31,8 +31,8 @@ PS C:\Temp\Project 1 - sources\TEST-policy> az policy assignment list
         "value": "Udacity project 1"
       }
     },
-    "policyDefinitionId": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/providers/Microsoft.Authorization/policyDefinitions/tagging-policy",
-    "scope": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d",
+    "policyDefinitionId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Authorization/policyDefinitions/tagging-policy",
+    "scope": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "systemData": {
       "createdAt": "2023-01-31T13:41:37.930484+00:00",
       "createdBy": "bvt3@ymail.com",
@@ -45,17 +45,17 @@ PS C:\Temp\Project 1 - sources\TEST-policy> az policy assignment list
   },
   {
     "description": "This is the default set of policies monitored by Azure Security Center. It was automatically assigned as part of onboarding to Security Center. The default assignment contains only audit policies. For more information please visit https://aka.ms/ascpolicies",
-    "displayName": "ASC Default (subscription: a9eb2381-970b-445a-b19e-5a5207d65a4d)",
+    "displayName": "ASC Default (subscription: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)",
     "enforcementMode": "Default",
-    "id": "/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/providers/Microsoft.Authorization/policyAssignments/SecurityCenterBuiltIn",
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Authorization/policyAssignments/SecurityCenterBuiltIn",
     "identity": null,
     "location": null,
     "systemData": {
       "createdAt": "2023-01-30T03:12:54.806967+00:00",
-      "createdBy": "8edd93e1-2103-40b4-bd70-6e34e586362d",
+      "createdBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "createdByType": "Application",
       "lastModifiedAt": "2023-01-30T03:12:54.806967+00:00",
-      "lastModifiedBy": "8edd93e1-2103-40b4-bd70-6e34e586362d",
+      "lastModifiedBy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "lastModifiedByType": "Application"
     },
     "type": "Microsoft.Authorization/policyAssignments"
