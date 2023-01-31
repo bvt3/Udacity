@@ -14,17 +14,27 @@ For this project, I created a Packer template and a Terraform template to deploy
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-####1. Running the Packer template:
+1. Running the Packer template:
+
     a. Open the server.json file, in line 3, 4, and 5, you need to supply the client id, secret and subscription id from your Azure account respectively. 
-    b. The Packer is dependent to an existing resource group, by default the resource group name is "PackerImages" in line 6, you need to pre-create this, using the command below: az group create --name PackerImages --location southcentralus
+    
+    b. The Packer is dependent to an existing resource group, by default the resource group name is "PackerImages" in line 6, you need to pre-create this, using the Azure CLI command:  az group create --name PackerImages --location southcentralus
+    
     c. The location is set by default to "South Central US", change this if necessary.
     
+    d. Once you have created the resource group, run the packer command:  packer build server.json
+    
 3. Running the Terraform template:
+
+    a. There are three files related to terraform, these are the main.tf, variables.tf and output.tf. You can run directly the terraform plan using the command:  terraform apply "solution.plan" 
+    
+    b.
 
 ### Output
 Below is the expected output of the terraform apply command, these are defined from output.tf, the azurerm_lb_frontend_ip_configuration and vm_name output variables.
 
 Outputs:
+
 
 azurerm_lb_frontend_ip_configuration = tolist([
   {
@@ -44,6 +54,7 @@ azurerm_lb_frontend_ip_configuration = tolist([
     "zones" = tolist([])
   },
 ])
+
 vm_name = [
   "prj1-vm1",
   "prj1-vm2",
