@@ -34,7 +34,7 @@ variable "tags" {
 
 variable "application_port" {
    description = "Port that you want to expose to the external load balancer"
-   default     = 22
+   default     = 80
 }
 
 variable "admin_user" {
