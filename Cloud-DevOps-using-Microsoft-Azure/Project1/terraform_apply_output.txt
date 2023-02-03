@@ -1,72 +1,93 @@
 PS C:\Temp\Project 1 - sources\TEST-main> terraform apply "solution.plan"
 azurerm_resource_group.project1: Creating...
-azurerm_resource_group.project1: Creation complete after 4s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1]
+azurerm_resource_group.project1: Creation complete after 3s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1]
 azurerm_virtual_network.project1: Creating...
-azurerm_availability_set.availset: Creating...
 azurerm_network_security_group.project1: Creating...
 azurerm_public_ip.project1: Creating...
+azurerm_availability_set.availset: Creating...
+azurerm_public_ip.project1: Creation complete after 9s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/publicIPAddresses/prj1-pip]
+azurerm_lb.project1: Creating...
 azurerm_availability_set.availset: Creation complete after 9s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Compute/availabilitySets/prj1-availset]
 azurerm_network_security_group.project1: Still creating... [10s elapsed]
-azurerm_public_ip.project1: Still creating... [10s elapsed]
 azurerm_virtual_network.project1: Still creating... [10s elapsed]
-azurerm_public_ip.project1: Creation complete after 11s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/publicIPAddresses/prj1-pip]
-azurerm_lb.project1: Creating...
-azurerm_network_security_group.project1: Creation complete after 12s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkSecurityGroups/prj1-nsg]
-azurerm_virtual_network.project1: Creation complete after 14s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/virtualNetworks/prj1-vn]
+azurerm_network_security_group.project1: Creation complete after 14s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkSecurityGroups/prj1-nsg]
+azurerm_network_security_rule.example["DenyAllInbound"]: Creating...
+azurerm_network_security_rule.example["AllowApplicationInbound"]: Creating...
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Creating...
+azurerm_network_security_rule.example["AllowLoadBalancerInbound"]: Creating...
+azurerm_virtual_network.project1: Creation complete after 15s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/virtualNetworks/prj1-vn]
 azurerm_subnet.project1: Creating...
-azurerm_lb.project1: Creation complete after 8s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb]
+azurerm_lb.project1: Creation complete after 10s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb]
 azurerm_lb_backend_address_pool.project1: Creating...
 azurerm_lb_probe.project1: Creating...
-azurerm_subnet.project1: Creation complete after 8s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/virtualNetworks/prj1-vn/subnets/prj1-subnet]
+azurerm_network_security_rule.example["DenyAllInbound"]: Still creating... [10s elapsed]
+azurerm_network_security_rule.example["AllowApplicationInbound"]: Still creating... [10s elapsed]
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Still creating... [10s elapsed]
+azurerm_network_security_rule.example["AllowLoadBalancerInbound"]: Still creating... [10s elapsed]
+azurerm_subnet.project1: Creation complete after 9s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/virtualNetworks/prj1-vn/subnets/prj1-subnet]
 azurerm_subnet_network_security_group_association.nsg-association: Creating...
-azurerm_network_interface.project1[1]: Creating...
 azurerm_network_interface.project1[0]: Creating...
+azurerm_network_interface.project1[1]: Creating...
 azurerm_lb_probe.project1: Creation complete after 6s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/probes/prj1-probe]
 azurerm_lb_backend_address_pool.project1: Still creating... [10s elapsed]
+azurerm_network_security_rule.example["AllowLoadBalancerInbound"]: Creation complete after 15s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkSecurityGroups/prj1-nsg/securityRules/AllowLoadBalancerInbound]
 azurerm_lb_backend_address_pool.project1: Creation complete after 10s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/backendAddressPools/prj1-beap]
-azurerm_lb_rule.lbnatrule: Creating...
-azurerm_subnet_network_security_group_association.nsg-association: Creation complete after 10s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/virtualNetworks/prj1-vn/subnets/prj1-subnet]
-azurerm_network_interface.project1[1]: Still creating... [10s elapsed]
+azurerm_lb_rule.project1: Creating...
+azurerm_network_interface.project1[1]: Creation complete after 7s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic2]
+azurerm_network_security_rule.example["DenyAllInbound"]: Still creating... [20s elapsed]
+azurerm_network_security_rule.example["AllowApplicationInbound"]: Still creating... [20s elapsed]
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Still creating... [20s elapsed]
+azurerm_subnet_network_security_group_association.nsg-association: Still creating... [10s elapsed]
 azurerm_network_interface.project1[0]: Still creating... [10s elapsed]
-azurerm_lb_rule.lbnatrule: Creation complete after 4s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/loadBalancingRules/ssh-inbound-rule]
-azurerm_network_interface.project1[0]: Creation complete after 18s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic1]
-azurerm_network_interface.project1[1]: Still creating... [20s elapsed]
-azurerm_network_interface.project1[1]: Creation complete after 23s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic2]
-azurerm_virtual_machine.project1[0]: Creating...
+azurerm_network_interface.project1[0]: Creation complete after 11s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic1]
 azurerm_network_interface_backend_address_pool_association.project1[0]: Creating...
 azurerm_network_interface_backend_address_pool_association.project1[1]: Creating...
+azurerm_virtual_machine.project1[0]: Creating...
 azurerm_virtual_machine.project1[1]: Creating...
-azurerm_network_interface_backend_address_pool_association.project1[0]: Creation complete after 6s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic1/ipConfigurations/prj1-ipconfig1|/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/backendAddressPools/prj1-beap]
-azurerm_network_interface_backend_address_pool_association.project1[1]: Creation complete after 6s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic2/ipConfigurations/prj1-ipconfig2|/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/backendAddressPools/prj1-beap]
+azurerm_lb_rule.project1: Creation complete after 8s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/loadBalancingRules/lb-inbound-rule]
+azurerm_network_security_rule.example["DenyAllInbound"]: Creation complete after 27s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkSecurityGroups/prj1-nsg/securityRules/DenyAllInbound]
+azurerm_network_security_rule.example["AllowApplicationInbound"]: Still creating... [30s elapsed]
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Still creating... [30s elapsed]
+azurerm_subnet_network_security_group_association.nsg-association: Still creating... [20s elapsed]
+azurerm_network_interface_backend_address_pool_association.project1[1]: Still creating... [10s elapsed]
+azurerm_network_interface_backend_address_pool_association.project1[0]: Still creating... [10s elapsed]
 azurerm_virtual_machine.project1[0]: Still creating... [10s elapsed]
 azurerm_virtual_machine.project1[1]: Still creating... [10s elapsed]
+azurerm_network_interface_backend_address_pool_association.project1[0]: Creation complete after 11s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic1/ipConfigurations/prj1-ipconfig1|/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/backendAddressPools/prj1-beap]
+azurerm_network_interface_backend_address_pool_association.project1[1]: Creation complete after 11s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkInterfaces/prj1-nic2/ipConfigurations/prj1-ipconfig2|/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/loadBalancers/prj1-lb/backendAddressPools/prj1-beap]
+azurerm_network_security_rule.example["AllowApplicationInbound"]: Still creating... [40s elapsed]
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Still creating... [40s elapsed]
+azurerm_network_security_rule.example["AllowApplicationInbound"]: Creation complete after 40s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkSecurityGroups/prj1-nsg/securityRules/AllowApplicationInbound]
+azurerm_subnet_network_security_group_association.nsg-association: Still creating... [30s elapsed]
 azurerm_virtual_machine.project1[0]: Still creating... [20s elapsed]
 azurerm_virtual_machine.project1[1]: Still creating... [20s elapsed]
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Still creating... [50s elapsed]
+azurerm_subnet_network_security_group_association.nsg-association: Still creating... [40s elapsed]
 azurerm_virtual_machine.project1[0]: Still creating... [30s elapsed]
 azurerm_virtual_machine.project1[1]: Still creating... [30s elapsed]
+azurerm_network_security_rule.example["AllowApplicationOutbound"]: Creation complete after 53s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/networkSecurityGroups/prj1-nsg/securityRules/AllowApplicationOutbound]
+azurerm_subnet_network_security_group_association.nsg-association: Still creating... [50s elapsed]
 azurerm_virtual_machine.project1[0]: Still creating... [40s elapsed]
 azurerm_virtual_machine.project1[1]: Still creating... [40s elapsed]
+azurerm_subnet_network_security_group_association.nsg-association: Creation complete after 52s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Network/virtualNetworks/prj1-vn/subnets/prj1-subnet]
 azurerm_virtual_machine.project1[0]: Still creating... [50s elapsed]
 azurerm_virtual_machine.project1[1]: Still creating... [50s elapsed]
+azurerm_virtual_machine.project1[1]: Creation complete after 59s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Compute/virtualMachines/prj1-vm2]
 azurerm_virtual_machine.project1[0]: Still creating... [1m0s elapsed]
-azurerm_virtual_machine.project1[1]: Still creating... [1m0s elapsed]
 azurerm_virtual_machine.project1[0]: Still creating... [1m10s elapsed]
-azurerm_virtual_machine.project1[1]: Still creating... [1m10s elapsed]
 azurerm_virtual_machine.project1[0]: Still creating... [1m20s elapsed]
-azurerm_virtual_machine.project1[1]: Still creating... [1m20s elapsed]
 azurerm_virtual_machine.project1[0]: Creation complete after 1m28s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Compute/virtualMachines/prj1-vm1]
-azurerm_virtual_machine.project1[1]: Creation complete after 1m29s [id=/subscriptions/a9eb2381-970b-445a-b19e-5a5207d65a4d/resourceGroups/Project1/providers/Microsoft.Compute/virtualMachines/prj1-vm2]
 ╷
 │ Warning: Argument is deprecated
 │
-│   with azurerm_lb_rule.lbnatrule,
-│   on main.tf line 99, in resource "azurerm_lb_rule" "lbnatrule":
-│   99:    backend_address_pool_id        = azurerm_lb_backend_address_pool.project1.id
+│   with azurerm_lb_rule.project1,
+│   on main.tf line 100, in resource "azurerm_lb_rule" "project1":
+│  100:    backend_address_pool_id        = azurerm_lb_backend_address_pool.project1.id
 │
 │ This property has been deprecated by `backend_address_pool_ids` and will be removed in the next major version of the provider
 ╵
 
-Apply complete! Resources: 17 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 21 added, 0 changed, 0 destroyed.
 
 Outputs:
 
