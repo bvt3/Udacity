@@ -26,9 +26,9 @@ For this project, I created a Packer template and a Terraform template to deploy
     
 3. Running the Terraform template:
 
-    a. There are three files related to terraform, these are the main.tf, variables.tf and output.tf. You can run directly the terraform plan using the command:  terraform apply "solution.plan" 
+    a. There are four files related to terraform, these are the main.tf, variables.tf, locals.tf and output.tf. You can run directly the terraform plan using the command:  terraform apply "solution.plan" 
     
-    b. You can edit some of the default parameters by opening the file variables.tf. Here you can find and set variables like vm_count, location, etc. For example, the vm_count variable has a default value of 2, set this to a value of maximum 5. Only the two variables namely packer_resource_group_name and packer_image_name should not be change because it is dependent on the Packer template from before.
+    b. You can edit some of the default parameters by opening the file variables.tf and locals.tf. Inside the variables.tf, you can find and set variables like vm_count, location, etc. For example, the vm_count variable has a default value of 2, set this to a value of maximum 5. Only the two variables namely packer_resource_group_name and packer_image_name should not be change because it is dependent on the Packer template from before. The locals.tf contains the network security group rules, so when there are changes to the said rules, it is maintained here.
     
     c. And finally, once done, run the command "terraform destroy" to clean up the resources, and delete the packer image using the command: az image delete -g PackerImages -n Ubuntu1804LTS-image.
 
